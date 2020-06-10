@@ -87,9 +87,9 @@ def rate_bucket(dataset, rate_low, rate_high):
     return rated_movies
 
 # Read the data file and store it as a list 'movies'
-opened_file = open(path, encoding="utf8")
-read_file = reader(opened_file)
-movies = list(read_file)
+#opened_file = open(path, encoding="utf8")
+#read_file = reader(opened_file)
+#movies = list(read_file)
 
 mydict={}
 with open(path, 'r') as file:
@@ -105,7 +105,7 @@ movies_header = mydict[0]
 
 # Subset the movies dataset such that the header is removed from the list and store it back in movies
 del mydict[0]
-del movies[0]
+#del movies[0]
 
 
 
@@ -118,7 +118,7 @@ del movies[4553]
 
 # Using explore_data() with appropriate parameters, view the details of the first 5 movies.
 
-#explore_data(mydict,1,6,False)
+explore_data(mydict,1,6,False)
 
 
 
@@ -132,12 +132,12 @@ del movies[4553]
 
 
 # Create a list 'movies_clean', which will filter out the duplicate movies and contain the rows with maximum number of reviews for duplicate movies, as stored in 'review_max'. 
-#duplicate_and_unique_movies(mydict,13)
+duplicate_and_unique_movies(mydict,13)
 
 
 
 # Calling movies_lang(), extract all the english movies and store it in movies_en.
-#movies_en =  movies_lang(mydict,3,"en")
+movies_en =  movies_lang(mydict,3,"en")
 
 
 
